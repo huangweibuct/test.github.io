@@ -1,0 +1,9 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+.jekyll-cache/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

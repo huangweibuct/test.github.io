@@ -1,0 +1,60 @@
+{
+ "fetched_at": "2026-10-22 01:27 UTC",
+ "sections": {
+  "intro": [
+   "国家海外高层次引进青年人才，同济大学测绘与地理信息学院和 城市交通研究院 长聘 教授，多伦多都会大学（瑞尔森大学）客座教授，日本庆应义塾大学Global Professor。现任国际摄影测量与遥感学会（ISPRS）Human Behaviour, Mobility and Socio-Spatial Dynamics（WG IV/7）工作组主席，中国测绘学会“地图学与地理信息系统”专业委员会委员 ，中国科协联合国咨商国土空间规划与地理信息专业委员会委员， ISPRS International Journal of Geo-Information 副主编， 测绘学报（英文版） 编委。2018年8月-2021年2月在加拿大安大略省交通部工作，2016年12月-2018年7月在 德国海德堡GIScience研究所 进行博士后研究工作。2016年获得加拿大瑞尔森大学GIS方向博士学位，2011年获得中南大学地图学与地理信息系统专业硕士学位，2008年获得北京化工大学计算机科学与技术专业学士学位。2016年获国际摄影测量与遥感学会（ISPRS） The U.V. Helava Award Best Paper 。"
+  ],
+  "recruitment": [
+   "如果你对具身智能，城市空间智能理解，城市人类活动模式挖掘， 人-机-环境交互等方向 感兴趣，欢迎申请攻读博士、硕士研究生；也欢迎优秀的在校本科生申请课题组实习机会！招生要求如下：",
+   "具有但不限于测绘地理信息、计算机、自动化、交通工程、城市规划、应用数学、统计等背景",
+   "具有令人羡慕的自我驱动力",
+   "对世界仍然怀有一颗好奇心、喜欢异想天开、追求完美者有加分",
+   "致力于改变未来人类城市出行和人机交互方式者有加分",
+   "【NEW！！】 拟招收2027级博士研究生2名，研究方向：",
+   "1. 城市行人空间多模态智能理解AI模型研究",
+   "2. 城市环境与人类日常出行行为的交互研究"
+  ],
+  "interests": [
+   "地理人工智能，城市具身智能，城市信息学，计算社会科学"
+  ],
+  "projects": [
+   "“复杂城市环境具身智能时空认知研究”，国家自然科学基金面上项目（42671609），2027.1-2030.12，项目负责人",
+   "“城市人类活动时空模式与交通拥堵交互机制研究”，国家自然科学基金面上项目（42171452），2022.1-2025.12，项目负责人",
+   "“高精地图的长效与动态更新及交互机制”，国家重点研发计划项目子课题（2021YFB2501101），2021.12-2024.11，项目负责人",
+   "国家高层次人才计划项目，2021-2025，项目负责人",
+   "同济大学高层次人才计划项目，2021-2025，项目负责人"
+  ],
+  "publications": [
+   "Su, P., Chen, R., Xu, H., Huang, W.* , Deng, X., Li, S., ... & Liu, C. (2026). BuildingSense: a new multimodal building function classification dataset . Earth System Science Data , 18(4), 2609-2634.",
+   "Huan, W., Tan, K., Liu, X., Jia, S., Lu, S., Zhang, J., & Huang, W.* (2025). A spatiotemporal adaptive local search method for tracking congestion propagation in dynamic networks . GIScience & Remote Sensing , 62(1), 2602215.",
+   "Chen, R., Jiang, S., & Huang, W.* (2025, November). SeMob: Semantic Synthesis for Dynamic Urban Mobility Prediction . In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (pp. 15346-15366).",
+   "Yang, L., Huang, W.* , Liu, X., & Yan, W. (2025). Wheelchair accessibility to public facilities via transits and analysis of delay factors—A case study of Shanghai, China . Computers, Environment and Urban Systems , 121, 102331.",
+   "Yifan Xu, Huang, W* , Junhua Xiao, Jie Shan, Mengbo Liu, Weian Guo, Yushan Zhu, Jing Zhang, Yu Yan. (2026). A WebGIS-based digital twin platform for intelligent operation and maintenance of rail transit infrastructure . Expert Systems with Applications , 296, 129180.",
+   "Huan, W., Li, S., Liu, X., Wu, H., Diao, M., Li, H., Huang, W* . (2025). Correlation and causality between traffic congestion and the built environment: a case study in New York city . International Journal of Digital Earth , 18(2).",
+   "Chen, H., Liu, H., Li, S., Grinberger, A.Y., Wu, H, Liu, C. & Huang, W. * (2025). Spatiotemporal dynamics of violence in social unrest events based on geo-social media data . Environment and Planning B: Urban Analytics and City Science, 10.1177/23998083251344354.",
+   "Su, P., Yan, Y., Li, H., Wu, H., Liu, C., & Huang, W. * (2025). Images and deep learning in human and urban infrastructure interactions pertinent to sustainable urban studies: Review and perspective . International Journal of Applied Earth Observation and Geoinformation, 136, 104352 .",
+   "Li, H., Yuang, Z., Novack, T., Huang, W. *, & Zip, A. (2022). Understanding spatiotemporal motivations of urban micro-mobility from the lens of dockless e-scooter sharing . Computers, Environment and Urban Systems , 96, 101848.",
+   "Liu, C., Chen, L., Yuan, Q., Wu, H., & Huang, W. * (2022). Revealing Dynamic Spatial Structures of Urban Mobility Networks and the Underlying Evolutionary Patterns . ISPRS International Journal of Geo-Information , 11(4), 237.",
+   "Xu, S., Li, S., Huang, W. , & Wen, R. (2022). Detecting spatiotemporal traffic events using geosocial media data . Computers, Environment and Urban Systems , 94, 101797.",
+   "Jiao, W., Huang, W. , & Fan, H. (2022). Evaluating spatial accessibility to healthcare services from the lens of emergency hospital visits based on floating car data . International Journal of Digital Earth , 15(1), 108-133.",
+   "Huang, W. (2022). What Were GIScience Scholars Interested in During the Past Decades? . Journal of Geovisualization and Spatial Analysis , 1(6):7.",
+   "Klumpenhouwer, W., & Huang, W. * (2021). A flexible framework for measuring accessibility with destination bundling . Journal of Transport Geography , 91, 102949.",
+   "Yan, Y., Feng, C. C., Huang, W. , Fan, H., Wang, Y. C., & Zipf, A. (2020). Volunteered geographic information research in the first decade: a narrative review of selected journal articles in GIScience . International Journal of Geographical Information Science , 34(9), 1765-1791.",
+   "Huang, W. & Li, S. (2018). An approach for understanding urban human activity patterns with the motivations . International Journal of Geographical Information Science , 33(2), 385-407.",
+   "Huang, W. , Xu., S., Yan, Y. & Zipf, A. (2018). An exploration of the interaction between human activities and daily traffic conditions: A case study of Toronto, Canada . Cities , 84, 8-22.",
+   "Huang, W. , Fan, H. & Zipf, A. (2017). Towards detecting the crowd involved in social events . ISPRS International Journal of Geo-Information , 6 (10), 305.",
+   "Huang, W. & Li, S. (2016). Understanding human activity pattern based on space-time-semantics . ISPRS Journal of Photogrammetry and Remote Sensing , 121, 1-10. (Best Paper)",
+   "Huang, W. , Sun, M. & Li, S. (2016). A 3D GIS-based interactive registration mechanism for outdoor augmented reality system . Expert Systems with Applications , 55, 48-58.",
+   "Huang, W. , Li, S. Liu, X., & Ban, Y. (2015). Predicting human mobility with activity changes . International Journal of Geographical Information Science , 29 (9), 1569-1587."
+  ],
+  "teaching": [
+   "同济大学",
+   "网络地理信息系统 (本科)，地理时空信息大数据（本科），人工智能科学与技术（本科），专业导论（本科）",
+   "多伦多都会大学",
+   "2019，2020秋季学期： CVL736: Geospatial Information Systems (本科)",
+   "2020冬季学期：CV8501: Advanced Geospatial Information Systems (研究生）",
+   "德国海德堡大学",
+   "2017秋季学期：Geospatial Analysis of Geosocial Media Data (本科/研究生)"
+  ]
+ }
+}

@@ -1,0 +1,129 @@
+/* ==========================================================================
+   People grid & synced profile panel
+   ========================================================================== */
+
+.people-group-title {
+  margin: 2rem 0 1rem;
+  font-size: $type-size-5;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $gray;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 0.4rem;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.75rem 1.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.person-photo {
+  width: 100%;
+  max-width: 168px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  background: $lighter-gray;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+}
+
+.person-card:hover .person-photo img {
+  transform: scale(1.05);
+}
+
+.person-name {
+  margin-top: 0.65rem;
+  font-size: $type-size-6;
+  font-weight: 600;
+  color: $text-color;
+  line-height: 1.3;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.person-research {
+  margin-top: 0.25rem;
+  font-size: $type-size-7;
+  color: $gray;
+  line-height: 1.45;
+  max-width: 180px;
+}
+
+/* --- Tongji synced profile panel ---------------------------------------- */
+
+.tongji-sync {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid $border-color;
+  border-left: 3px solid $info-color;
+  border-radius: $border-radius;
+  background: $code-background-color;
+  font-size: $type-size-6;
+}
+
+.tongji-sync__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: $dark-gray;
+  margin-bottom: 0.6rem;
+}
+
+.tongji-sync__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $success-color;
+  flex: none;
+}
+
+.tongji-sync__row {
+  margin: 0.35rem 0;
+
+  ul {
+    margin: 0.2rem 0 0;
+    padding-left: 1.1rem;
+  }
+}
+
+.tongji-sync__row--highlight {
+  color: $danger-color;
+
+  .tongji-sync__label {
+    color: $text-color;
+  }
+}
+
+.tongji-sync__label {
+  display: inline-block;
+  font-weight: 600;
+  margin-right: 0.35rem;
+  color: $text-color;
+}
+
+.tongji-sync__meta {
+  margin-top: 0.6rem;
+  font-size: $type-size-7;
+  color: $gray;
+}

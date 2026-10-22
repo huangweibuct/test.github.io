@@ -1,0 +1,20 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /#publications
+    
+  - title: "News"
+    url: /#news
+    
+  - title: "People"
+    url: /#people
+
+  - title: "Talks"
+    url: /#talks    
+
+  - title: "Teaching"
+    url: /#teaching    
+    
+# - title: "Portfolio"
+#    url: /portfolio/
+        

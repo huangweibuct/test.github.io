@@ -1,0 +1,52 @@
+# Team members. To add/edit a person, just update an entry below.
+#   name    : display name
+#   photo   : filename under /images/
+#   link    : optional personal page (leave empty for none)
+#   research: main research direction shown under the photo
+groups:
+  - title: "Postdoctoral researcher"
+    members:
+      - name: "Yulan Sheng"
+        photo: "syl.jpg"
+        link: "https://www.researchgate.net/profile/Yulan-Sheng"
+        research: "Spatio-temporal data mining & urban mobility"
+
+  - title: "PhD students"
+    members:
+      - name: "Pengxiang Su"
+        photo: "spx.jpg"
+        research: "Building function classification & macro-mirco human mobbility pattern"
+      - name: "Chenghu He"
+        photo: "hch.jpg"
+        research: "Geo-social media & social unrest dynamics"
+      - name: "Shijun Lu"
+        photo: "lsj.jpg"
+        research: "Congestion propagation tracking in dynamic networks"
+      - name: "Luoan Yang"
+        photo: "yla.jpg"
+        link: "https://www.researchgate.net/profile/Luoan-Yang"
+        research: "Public transit accessibility analysis"
+      - name: "Heng Xu"
+        photo: "xh.jpg"
+        research: "Multimodal GeoAI & building function classification"
+      - name: "Zheng Tan"
+        photo: "tz.jpg"
+        research: "Spatio-temporal AI for urban studies"
+      - name: "Runfei Chen"
+        photo: "crf.jpg"
+        research: "Semantic urban mobility prediction"
+      - name: "Jiaming Chen"
+        photo: "cjm.jpg"
+        research: "Urban sensing & GeoAI"
+
+  - title: "Master students"
+    members:
+      - name: "Zehan Lin"
+        photo: "lzh.jpg"
+        research: "Urban human activity patterns"
+      - name: "Jialiang Cao"
+        photo: "cjl.png"
+        research: "GIScience & spatial analysis"
+      - name: "Chen Jia"
+        photo: "jc.png"
+        research: "Urban computing"

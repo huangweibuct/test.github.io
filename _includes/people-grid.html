@@ -1,0 +1,25 @@
+{% comment %}
+  Renders the team members from _data/people.yml as a clean photo grid.
+  Usage: include people-grid.html
+{% endcomment %}
+
+{% for group in site.data.people.groups %}
+  <h3 class="people-group-title">{{ group.title }}</h3>
+  <div class="people-grid">
+    {% for member in group.members %}
+      <div class="person-card">
+        <div class="person-photo">
+          <img src="{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        {% if member.link %}
+          <a class="person-name" href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a>
+        {% else %}
+          <span class="person-name">{{ member.name }}</span>
+        {% endif %}
+        {% if member.research %}
+          <span class="person-research">{{ member.research }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

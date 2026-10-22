@@ -1,0 +1,44 @@
+{% comment %}
+  Compact "live" panel fed by _data/tongji.yml (auto-updated daily by
+  scripts/sync_tongji.py from https://celiang.tongji.edu.cn/info/1300/2388.htm).
+  Chinese terms from the source page are rendered in English via replace
+  mappings below; new/unknown phrases fall back to the original Chinese.
+{% endcomment %}
+{% if site.data.tongji %}
+{% assign t = site.data.tongji %}
+<aside class="tongji-sync">
+  <div class="tongji-sync__header">
+    <span class="tongji-sync__dot"></span>
+    Faculty profile &mdash;
+  </div>
+
+  {% if t.sections.interests %}
+  <div class="tongji-sync__row">
+    <span class="tongji-sync__label">Research interests</span>
+    {% for entry in t.sections.interests %}{{ entry.text | replace: '地理人工智能', 'Geospatial AI' | replace: '城市具身智能', 'Urban Embodied Intelligence' | replace: '城市信息学', 'Urban Informatics' | replace: '计算社会科学', 'Computational Social Science' | replace: '，', ' &middot; ' }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+  </div>
+  {% endif %}
+
+  {% assign news = t.sections.recruitment | where_exp: "e", "e.text contains '拟招收' or e.text contains '实习' or e.text =~ r'^\d+\\.'" %}
+  {% if news.size > 0 %}
+  <div class="tongji-sync__row tongji-sync__row--highlight">
+    <span class="tongji-sync__label">Recruitment</span>
+    <ul>
+      {% for entry in news %}
+        {% assign line = entry.text %}
+        {% if line contains '如果你对' %}
+          <li>Prospective PhD and Master students, as well as undergraduate interns, interested in embodied intelligence, urban spatial intelligence, urban human activity pattern mining, and human&ndash;machine&ndash;environment interaction are all welcome to apply.</li>
+        {% else %}
+          <li>{{ line | remove: '【NEW！！】' | replace: '拟招收', 'Openings for ' | replace: '级博士研究生', '-intake PhD students: ' | replace: '名，研究方向：', ' positions. Research directions:' | replace: '城市行人空间多模态智能理解AI模型研究', 'Multimodal AI models for understanding urban pedestrian space' | replace: '城市环境与人类日常出行行为的交互研究', 'Interaction between urban environments and everyday human travel behavior' | strip }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="tongji-sync__meta">
+    Last checked: {{ t.fetched_at }} &middot;
+    <a href="{{ t.source_url }}" target="_blank" rel="noopener">source</a>
+  </div>
+</aside>
+{% endif %}

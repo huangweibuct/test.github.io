@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Wei Huang — 静态预览</title>
+<style>
+  /* ---- theme approximation (minimal mistakes / academicpages) ---- */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; line-height: 1.5; color: #494e52; background: #fff;
+  }
+  a { color: #52adc8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 1.953em; margin: 0 0 1em; line-height: 1.2; }
+  h2 { font-size: 1.563em; margin: 0 0 1em; line-height: 1.2; }
+  p, ul { margin: 0 0 1.3em; }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.45em; }
+
+  .preview-banner {
+    background: #494e52; color: #fff; font-size: 12px; text-align: center;
+    padding: 5px 10px; letter-spacing: .04em;
+  }
+
+  .masthead {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1em 2em; border-bottom: 1px solid #f2f2f3; margin-bottom: 2em;
+  }
+  .masthead .site-title { font-weight: 700; font-size: 1.1em; color: #494e52; }
+  .masthead nav a {
+    font-size: 13px; text-transform: uppercase; letter-spacing: .05em;
+    color: #7a8288; margin-left: 1.2em;
+  }
+
+  .wrapper { max-width: 925px; margin: 0 auto; padding: 0 1.5em 3em; display: flex; gap: 2.5em; }
+  .sidebar { flex: 0 0 240px; font-size: 14px; }
+  .sidebar img { width: 140px; height: 140px; border-radius: 50%; display: block; margin-bottom: 1em; }
+  .sidebar .author-name { font-weight: 700; font-size: 1.15em; }
+  .sidebar .author-bio { margin: .3em 0 1em; color: #7a8288; }
+  .sidebar ul { list-style: none; padding: 0; }
+  .sidebar li { margin-bottom: .35em; font-size: 13px; }
+  .main { flex: 1; min-width: 0; }
+
+  /* ---- Tongji synced panel (from _includes/tongji-sync.html) ---- */
+  .tongji-sync {
+    margin: 1.5rem 0 2rem; padding: 1rem 1.25rem;
+    border: 1px solid #f2f2f3; border-left: 3px solid #52adc8;
+    border-radius: 4px; background: #fafafa; font-size: 12px;
+  }
+  .tongji-sync__header { display: flex; align-items: center; gap: .5rem; font-weight: 600; color: #494e52; margin-bottom: .6rem; }
+  .tongji-sync__dot { width: 8px; height: 8px; border-radius: 50%; background: #62c462; flex: none; }
+  .tongji-sync__row { margin: .35rem 0; }
+  .tongji-sync__row ul { margin: .2rem 0 0; padding-left: 1.1rem; }
+  .tongji-sync__row--highlight { color: #ee5f5b; }
+  .tongji-sync__row--highlight .tongji-sync__label { color: #494e52; }
+  .tongji-sync__label { display: inline-block; font-weight: 600; margin-right: .35rem; color: #494e52; }
+  .tongji-sync__meta { margin-top: .6rem; font-size: 11px; color: #7a8288; }
+
+  /* ---- People grid (from _sass/_people.scss) ---- */
+  .people-group-title {
+    margin: 2rem 0 1rem; font-size: 1em; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; color: #7a8288;
+    border-bottom: 1px solid #f2f2f3; padding-bottom: .4rem;
+  }
+  .people-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.75rem 1.25rem; margin: 0 0 1.5rem;
+  }
+  .person-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .person-photo {
+    width: 100%; max-width: 168px; aspect-ratio: 1 / 1; border-radius: 10px;
+    overflow: hidden; box-shadow: 0 1px 1px rgba(0,0,0,.125); background: #f2f2f3;
+  }
+  .person-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease; }
+  .person-card:hover .person-photo img { transform: scale(1.05); }
+  .person-name { margin-top: .65rem; font-size: .8125em; font-weight: 600; color: #494e52; line-height: 1.3; }
+  .person-research { margin-top: .25rem; font-size: .75em; color: #7a8288; line-height: 1.45; max-width: 180px; }
+
+  @media (max-width: 768px) {
+    .wrapper { flex-direction: column; }
+    .sidebar { flex: none; }
+  }
+</style>
+</head>
+<body>
+<div class="preview-banner">STATIC PREVIEW · 由当前仓库数据渲染（非 Jekyll 构建）· 模拟线上样式</div>
+
+<header class="masthead">
+  <span class="site-title">Dr. Wei Huang</span>
+  <nav>
+    <a href="#">About</a><a href="#">Publications</a><a href="#">Teaching</a><a href="#">Talks</a><a href="#">Portfolio</a><a href="#">Sitemap</a>
+  </nav>
+</header>
+
+<div class="wrapper">
+  <aside class="sidebar">
+    <img src="images/portrait_2022.jpg" alt="Wei Huang">
+    <div class="author-name">Wei Huang</div>
+    <div class="author-bio">Professor of GIScience, Tongji University</div>
+    <ul>
+      <li>📍 Shanghai, China</li>
+      <li><a href="mailto:wei_huang@tongji.edu.cn">✉ wei_huang@tongji.edu.cn</a></li>
+      <li><a href="https://scholar.google.ca/citations?user=_Xdi93IAAAAJ&amp;hl=en">Google Scholar</a></li>
+      <li><a href="https://www.researchgate.net/profile/Wei-Huang-48">ResearchGate</a></li>
+      <li><a href="https://github.com/huangweibuct">GitHub</a></li>
+      <li><a href="http://orcid.org/0000-0001-8324-8877">ORCID</a></li>
+      <li><a href="https://twitter.com/huangweibuct">Twitter</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h1>How can spatial big data as a tool help us better understand urban dynamics and social events?</h1>
+
+    <p>I am Professor at the <a href="https://celiang.tongji.edu.cn/info/1300/2388.htm">Tongji University</a> in Shanghai, China, and Adjunct Professor at <a href="https://www.ryerson.ca/">Ryerson University</a>, Toronto, Canada. My research interests lie at the intersection of GIScience, geography, computer science and computational social science, focusing on using GIS, geospatial big data and new sensing technologies to progress the understanding of the mechanism of the interaction between human activities, urban transportation and social events. I am the Chair of <a href="https://www2.isprs.org/commissions/comm4/wg7/">ISPRS WG IV/7 - Human Behaviour, Mobility and Socio-Spatial Dynamics</a>. I serve as Associate Editor for <a href="https://www.mdpi.com/journal/ijgi">ISPRS IJGI</a>.</p>
+
+    <aside class="tongji-sync">
+      <div class="tongji-sync__header"><span class="tongji-sync__dot"></span>Faculty profile &mdash;</div>
+      <div class="tongji-sync__row">
+        <span class="tongji-sync__label">Research interests</span>
+        Geospatial AI &middot; Urban Embodied Intelligence &middot; Urban Informatics &middot; Computational Social Science
+      </div>
+      <div class="tongji-sync__row tongji-sync__row--highlight">
+        <span class="tongji-sync__label">Recruitment</span>
+        <ul>
+          <li>Prospective PhD and Master students, as well as undergraduate interns, interested in embodied intelligence, urban spatial intelligence, urban human activity pattern mining, and human&ndash;machine&ndash;environment interaction are all welcome to apply.</li>
+          <li>Openings for 2027-intake PhD students: 2 positions. Research directions:</li>
+          <li>1. Multimodal AI models for understanding urban pedestrian space</li>
+          <li>2. Interaction between urban environments and everyday human travel behavior</li>
+        </ul>
+      </div>
+      <div class="tongji-sync__meta">Last checked: 2026-10-22 01:27 UTC &middot; <a href="https://celiang.tongji.edu.cn/info/1300/2388.htm" target="_blank" rel="noopener">source</a></div>
+    </aside>
+
+    <p>From 2016 to 2018, I was Planner at the Ministry of Transportation Ontario, Canada. I did my postdoc training in the <a href="https://www.geog.uni-heidelberg.de/gis/index_en.html">GIScience Research Group</a>, Institute of Geography at Heidelberg University, Germany between 2016 and 2018. Prior to Heidelberg, I received my PhD degree in Civil Engineering (Geomatics stream) from <a href="https://www.ryerson.ca/">Ryerson University</a>, Toronto, Canada in 2016. I received my master’s degree in Geographical Information Science (GIS) from Peking University and Central South University in 2011 and my bachelor’s degree in Computer Science and Technology from Beijing University of Chemical and Technology in 2008.</p>
+
+    <h1>NEWS</h1>
+    <ul>
+      <li><strong>I have several openings for postdocs and PhD students in Spatio-temporal AI for urban studies.</strong></li>
+      <li>2025.11: <a href="https://geohb2025.tongji.edu.cn/">2nd International Workshop on Geo-spatial Computing for Understanding Human Behaviors</a> will be held at Tongji University, Shanghai, China.</li>
+      <li>2023.10: We are orgnizing a SI: <a href="#">Imagery analytics for understanding human-urban infrastructure interactions</a> on the ISPRS Journal of Photogrammetry and Remote Sensing.</li>
+      <li>2023.9: Pengxiang Su Won the 2023 ISPRS Geospatial Week Best Presentation Award.</li>
+      <li>2023.9: Chenghu He and Shijun Lu joined the group as PhD students, and Haoran Fang, Yifan Xu and Zehan Lin joined the group as Master students. Welcome!</li>
+      <li>2022.9: Pengxiang and Weihua joined the group as PhD students, and Huanying and Zhaoyang joined the group as Master students. Welcome!</li>
+      <li>2022.6: Pengxiang Su and Huangying Chen successfully defended their Bachelor thesis. Congratulations! Pengxiang and Huanying will join the team as a PhD student and a Master student in Fall, respectively!</li>
+      <li>2021.8: Dr. Huang received an NSFC Grant.</li>
+      <li>2021.7: Dr. Huang started service as Associate Editor for <a href="https://www.mdpi.com/journal/ijgi">ISPRS IJGI</a>, handeling manuscripts on Citizen Science, Crowd Sourcing and Volunteered Geographic Information.</li>
+    </ul>
+
+    <h1>PEOPLE</h1>
+
+    <h3 class="people-group-title">Postdoctoral researcher</h3>
+    <div class="people-grid">
+      <div class="person-card">
+        <div class="person-photo"><img src="images/syl.jpg" alt="Yulan Sheng" loading="lazy"></div>
+        <a class="person-name" href="https://www.researchgate.net/profile/Yulan-Sheng" target="_blank" rel="noopener">Yulan Sheng</a>
+        <span class="person-research">Spatio-temporal data mining &amp; urban mobility</span>
+      </div>
+    </div>
+
+    <h3 class="people-group-title">PhD students</h3>
+    <div class="people-grid">
+      <div class="person-card">
+        <div class="person-photo"><img src="images/spx.jpg" alt="Pengxiang Su" loading="lazy"></div>
+        <span class="person-name">Pengxiang Su</span>
+        <span class="person-research">Deep learning &amp; imagery analytics for human-urban infrastructure interaction</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/hwh.jpg" alt="Weihua Huan" loading="lazy"></div>
+        <span class="person-name">Weihua Huan</span>
+        <span class="person-research">Traffic congestion &amp; built environment interaction</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/hch.jpg" alt="Chenghu He" loading="lazy"></div>
+        <span class="person-name">Chenghu He</span>
+        <span class="person-research">Geo-social media &amp; social unrest dynamics</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/lsj.jpg" alt="Shijun Lu" loading="lazy"></div>
+        <span class="person-name">Shijun Lu</span>
+        <span class="person-research">Congestion propagation tracking in dynamic networks</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/yla.jpg" alt="Luoan Yang" loading="lazy"></div>
+        <a class="person-name" href="https://www.researchgate.net/profile/Luoan-Yang" target="_blank" rel="noopener">Luoan Yang</a>
+        <span class="person-research">Public transit accessibility analysis</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/xh.jpg" alt="Heng Xu" loading="lazy"></div>
+        <span class="person-name">Heng Xu</span>
+        <span class="person-research">Multimodal GeoAI &amp; building function classification</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/tz.jpg" alt="Zheng Tan" loading="lazy"></div>
+        <span class="person-name">Zheng Tan</span>
+        <span class="person-research">Spatio-temporal AI for urban studies</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/crf.jpg" alt="Runfei Chen" loading="lazy"></div>
+        <span class="person-name">Runfei Chen</span>
+        <span class="person-research">Semantic urban mobility prediction</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/cjm.jpg" alt="Jiaming Chen" loading="lazy"></div>
+        <span class="person-name">Jiaming Chen</span>
+        <span class="person-research">Urban sensing &amp; GeoAI</span>
+      </div>
+    </div>
+
+    <h3 class="people-group-title">Master students</h3>
+    <div class="people-grid">
+      <div class="person-card">
+        <div class="person-photo"><img src="images/fhr.jpg" alt="Haoran Fang" loading="lazy"></div>
+        <span class="person-name">Haoran Fang</span>
+        <span class="person-research">Spatio-temporal data mining</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/xyf.jpg" alt="Yifan Xu" loading="lazy"></div>
+        <span class="person-name">Yifan Xu</span>
+        <span class="person-research">WebGIS &amp; digital twin for rail transit</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/lzh.jpg" alt="Zehan Lin" loading="lazy"></div>
+        <span class="person-name">Zehan Lin</span>
+        <span class="person-research">Urban human activity patterns</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/cjl.png" alt="Jialiang Cao" loading="lazy"></div>
+        <span class="person-name">Jialiang Cao</span>
+        <span class="person-research">GIScience &amp; spatial analysis</span>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><img src="images/jc.png" alt="Chen Jia" loading="lazy"></div>
+        <span class="person-name">Chen Jia</span>
+        <span class="person-research">Urban computing</span>
+      </div>
+    </div>
+
+    <h2>Alumni</h2>
+    <ul>
+      <li><a href="https://metayj.github.io/">Yanjie Zhang</a> (MS 2024), PhD@National University of Singapore</li>
+      <li>Huanyin Chen (MS 2024), PhD@Wuhan University</li>
+      <li>Zhaoyang Chen (MS 2024), Chinalco Shuwei (Chengdu) Technology Co., LTD</li>
+    </ul>
+
+    <h1>SELECTED HONOURS</h1>
+    <ul>
+      <li><a href="https://www.isprs.org/society/awards/helava/2016.aspx">The U. V. Helava Award</a> (Best Paper Award), International Society of Photogrammetry and Remote Sensing, 2016.</li>
+      <li>1st Place PhD Best Paper Award, International Conference on Location-based Social Media Data. Athens, Georgia, USA. Mar. 13-14, 2015.</li>
+    </ul>
+
+    <h1>PUBLICATIONS</h1>
+    <ul>
+      <li>Su, P., Chen, R., Xu, H., <strong>Huang, W.*</strong>, Deng, X., Li, S., et al. (2026). <a href="https://essd.copernicus.org/articles/18/2609/2026/essd-18-2609-2026.html">BuildingSense: a new multimodal building function classification dataset</a>. <em>Earth System Science Data</em>, 18(4), 2609-2634.</li>
+      <li>Chen, R., Jiang, S., &amp; <strong>Huang, W.*</strong> (2025, November). <a href="https://aclanthology.org/2025.emnlp-main.775/">SeMob: Semantic Synthesis for Dynamic Urban Mobility Prediction</a>. <em>In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing</em> (pp. 15346-15366).</li>
+      <li>Huan, W., Tan, K., Liu, X., Jia, S., Lu, S., Zhang, J., &amp; <strong>Huang, W.*</strong> (2025). <a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2602215">A spatiotemporal adaptive local search method for tracking congestion propagation in dynamic networks</a>. <em>GIScience &amp; Remote Sensing</em>, 62(1), 2602215.</li>
+      <li>Yang, L., <strong>Huang, W.*</strong>, Liu, X., &amp; Yan, W. (2025). <a href="https://doi.org/10.1016/j.compenvurbsys.2025.102331">Wheelchair accessibility to public facilities via transits and analysis of delay factors—A case study of Shanghai, China.</a> <em>Computers, Environment and Urban Systems</em>, 121, 102331.</li>
+      <li>Yifan Xu, <strong>Huang, W*</strong>, Junhua Xiao, Jie Shan, Mengbo Liu, Weian Guo, Yushan Zhu, Jing Zhang, Yu Yan. (2026). <a href="https://www.sciencedirect.com/science/article/pii/S0957417425027964">A WebGIS-based digital twin platform for intelligent operation and maintenance of rail transit infrastructure.</a> <em>Expert Systems with Applications</em>, 296, 129180.</li>
+      <li>Huan, W., Li, S., Liu, X., Wu, H., Diao, M., Li, H., <strong>Huang, W*</strong>. (2025). <a href="https://doi.org/10.1080/17538947.2025.2548377">Correlation and causality between traffic congestion and the built environment: a case study in New York city</a>. <em>International Journal of Digital Earth</em>, 18(2).</li>
+      <li>Pengxiang Su, Yingwei Yan, Hao Li, Hangbin Wu, Chun Liu, <strong>Huang, W*</strong>. (2025). <a href="https://doi.org/10.1016/j.jag.2024.104352">Images and deep learning in human and urban infrastructure interactions pertinent to sustainable urban studies: Review and perspective</a>. <em>Journal of Applied Earth Observation and Geoinformation</em>, 136, 104352.</li>
+      <li>Chen, H., Liu, X., Li, S., Grinberger, A. Y., Wu, H., Liu, C., &amp; <strong>Huang, W*</strong>. (2025). <a href="https://doi.org/10.1177/23998083251344354">Spatiotemporal dynamics of violence in social unrest events based on geo-social media data</a>. <em>Environment and Planning B: Urban Analytics and City Science</em> 23998083251344354.</li>
+      <li>Zhang, Y., <strong>Huang, W.*</strong>, Liu, X., &amp; Zhang, F. (2024). <a href="http://ch.whu.edu.cn/en/article/doi/10.13203/j.whugis20230166">An approach for high definition (HD) maps information interaction for autonomous driving (in Chinese)</a>. <em>Geomatics and Information Science of Wuhan University</em>.</li>
+      <li>Li, H., Yuang, Z., Novack, T., <strong>Huang, W.*</strong>, &amp; Zip, A. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S0198971522000928">Understanding spatiotemporal motivations of urban micro-mobility from the lens of dockless e-scooter sharing</a>. <em>Computers, Environment and Urban Systems</em>, 96, 101848.</li>
+      <li>Liu, C., Chen, L., Yuan, Q., Wu, H., &amp; <strong>Huang, W.*</strong> (2022). <a href="https://www.mdpi.com/2220-9964/11/4/237">Revealing Dynamic Spatial Structures of Urban Mobility Networks and the Underlying Evolutionary Patterns</a>. <em>ISPRS International Journal of Geo-Information</em>, 11(4), 237.</li>
+      <li>Xu, S., Li, S., <strong>Huang, W.</strong>, &amp; Wen, R. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S0198971522000412">Detecting spatiotemporal traffic events using geosocial media data</a>. <em>Computers, Environment and Urban Systems</em>, 94, 101797.</li>
+      <li>Jiao, W., <strong>Huang, W.</strong>, &amp; Fan, H. (2022). <a href="https://www.tandfonline.com/doi/full/10.1080/17538947.2021.2014578">Evaluating spatial accessibility to healthcare services from the lens of emergency hospital visits based on floating car data</a>. <em>International Journal of Digital Earth</em>, 15(1), 108-133.</li>
+      <li><strong>Huang, W.</strong> (2022). <a href="https://link.springer.com/article/10.1007/s41651-021-00098-3">What Were GIScience Scholars Interested in During the Past Decades?</a> <em>Journal of Geovisualization and Spatial Analysis</em>, 1(6):7.</li>
+      <li>Klumpenhouwer, W., &amp; <strong>Huang, W.*</strong> (2021). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0966692321000028">A flexible framework for measuring accessibility with destination bundling</a>. <em>Journal of Transport Geography</em>, 91, 102949.</li>
+      <li>Yan, Y., Feng, C. C., <strong>Huang, W.</strong>, Fan, H., Wang, Y. C., &amp; Zipf, A. (2020). <a href="https://www.tandfonline.com/doi/abs/10.1080/13658816.2020.1730848">Volunteered geographic information research in the first decade: a narrative review of selected journal articles in GIScience</a>. <em>International Journal of Geographical Information Science</em>, 34(9), 1765-1791.</li>
+      <li><strong>Huang, W.</strong> &amp; Li, S. (2018). <a href="https://www.tandfonline.com/doi/abs/10.1080/13658816.2018.1530354">An approach for understanding urban human activity patterns with the motivations</a>. <em>International Journal of Geographical Information Science</em>, 33(2), 385-407.</li>
+      <li><strong>Huang, W.</strong>, Xu., S., Yan, Y. &amp; Zipf, A. (2018). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0264275118302786">An exploration of the interaction between human activities and daily traffic conditions: A case study of Toronto, Canada</a>. <em>Cities</em>, 84, 8-22.</li>
+      <li><strong>Huang, W.</strong>, Fan, H. &amp; Zipf, A. (2017). <a href="https://www.mdpi.com/2220-9964/6/10/305">Towards detecting the crowd involved in social events</a>. <em>ISPRS International Journal of Geo-Information</em>, 6 (10), 305.</li>
+      <li><strong>Huang, W.</strong> &amp; Li, S. (2016). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271616303203">Understanding human activity pattern based on space-time-semantics</a>. <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, 121, 1-10. (Best Paper)</li>
+      <li><strong>Huang, W.</strong>, Sun, M. &amp; Li, S. (2016). <a href="https://www.sciencedirect.com/science/article/pii/S0957417416000609">A 3D GIS-based interactive registration mechanism for outdoor augmented reality system</a>. <em>Expert Systems with Applications</em>, 55, 48-58.</li>
+      <li><strong>Huang, W.</strong>, Li, S. Liu, X., &amp; Ban, Y. (2015). <a href="https://www.tandfonline.com/doi/abs/10.1080/13658816.2015.1033421">Predicting human mobility with activity changes</a>. <em>International Journal of Geographical Information Science</em>, 29 (9), 1569-1587.</li>
+    </ul>
+    <p><em>Please refer to my <a href="https://scholar.google.ca/citations?user=_Xdi93IAAAAJ&amp;hl=en">GoogleScholar</a> for complete pulbications.</em></p>
+
+    <h1>TEACHING</h1>
+    <h3>At Tongji, China</h3>
+    <ul><li>Fall 2022: Internet GIS (undergrad), Geospatial Big Data (undergrad)</li></ul>
+    <h3>At Ryerson, Canada</h3>
+    <ul>
+      <li>Fall 2019, 2020: CVL736-Geospatial Information Systems (undergrad)</li>
+      <li>Winter 2020: CV8501-Advanced Geospatial Information Systems (grad)</li>
+    </ul>
+    <h3>At Heidelberg, Germany</h3>
+    <ul><li>Fall 2017: Geospatial Analysis of Geosocial Media Data (undergrad &amp; grad)</li></ul>
+  </main>
+</div>
+</body>
+</html>
