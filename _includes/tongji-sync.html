@@ -6,6 +6,7 @@
 {% endcomment %}
 {% if site.data.tongji %}
 {% assign t = site.data.tongji %}
+<!-- tongji-sync v2 -->
 <aside class="tongji-sync">
   <div class="tongji-sync__header">
     <span class="tongji-sync__dot"></span>
@@ -19,7 +20,15 @@
   </div>
   {% endif %}
 
-  {% assign news = t.sections.recruitment | where_exp: "e", "e.text contains '拟招收' or e.text contains '实习' or e.text =~ r'^\d+\\.'" %}
+  {% comment %} recruitment lines: the intro sentence, the NEW!! openings line, and the numbered directions {% endcomment %}
+  {% assign news = "" | split: "" %}
+  {% for entry in t.sections.recruitment %}
+    {% assign et = entry.text %}
+    {% assign first = et | slice: 0, 1 %}
+    {% if et contains '如果你对' or et contains '拟招收' or first == '1' or first == '2' %}
+      {% assign news = news | push: entry %}
+    {% endif %}
+  {% endfor %}
   {% if news.size > 0 %}
   <div class="tongji-sync__row tongji-sync__row--highlight">
     <span class="tongji-sync__label">Recruitment</span>
