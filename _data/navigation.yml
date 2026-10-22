@@ -5,7 +5,10 @@ main:
     
   - title: "News"
     url: /#news
-    
+
+  - title: "Projects"
+    url: /#projects
+
   - title: "People"
     url: /#people
 

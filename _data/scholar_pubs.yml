@@ -1,0 +1,101 @@
+# Google Scholar publications (auto-refreshed daily by scripts/sync_scholar.py,
+# see .github/workflows/scholar-sync.yml).
+#
+# Only papers listed in `corresponding_titles` (normalized) are rendered on the
+# website, and only those within the last 10 years. Google Scholar does not mark
+# corresponding authors, so to flag a NEW paper as corresponding, add its title
+# to the list below — the next sync keeps the flag automatically.
+#
+# corresponding_titles matching is done on a normalized form (lowercase,
+# alphanumeric characters only).
+
+fetched_at: 2026-10-22 03:30 UTC
+source_url: https://scholar.google.com/citations?user=_Xdi93IAAAAJ&hl=en
+
+corresponding_titles:
+  - "BuildingSense: a new multimodal building function classification dataset"
+  - "SeMob: Semantic Synthesis for Dynamic Urban Mobility Prediction"
+  - "A spatiotemporal adaptive local search method for tracking congestion propagation in dynamic networks"
+  - "Wheelchair accessibility to public facilities via transits and analysis of delay factors-A case study of Shanghai, China"
+  - "A WebGIS-based digital twin platform for intelligent operation and maintenance of rail transit infrastructure"
+  - "Correlation and causality between traffic congestion and the built environment: a case study in New York city"
+  - "Images and deep learning in human and urban infrastructure interactions pertinent to sustainable urban studies: Review and perspective"
+  - "Spatiotemporal dynamics of violence in social unrest events based on geo-social media data"
+  - "An approach for high definition (HD) maps information interaction for autonomous driving (in Chinese)"
+  - "Understanding spatiotemporal motivations of urban micro-mobility from the lens of dockless e-scooter sharing"
+  - "Revealing Dynamic Spatial Structures of Urban Mobility Networks and the Underlying Evolutionary Patterns"
+  - "A flexible framework for measuring accessibility with destination bundling"
+
+publications:
+  - title: "BuildingSense: a new multimodal building function classification dataset"
+    authors: "Su, P., Chen, R., Xu, H., Huang, W., Deng, X., Li, S., et al."
+    year: 2026
+    venue: "Earth System Science Data, 18(4), 2609-2634"
+    url: "https://essd.copernicus.org/articles/18/2609/2026/essd-18-2609-2026.html"
+    corresponding: true
+  - title: "SeMob: Semantic Synthesis for Dynamic Urban Mobility Prediction"
+    authors: "Chen, R., Jiang, S., & Huang, W."
+    year: 2025
+    venue: "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, 15346-15366"
+    url: "https://aclanthology.org/2025.emnlp-main.775/"
+    corresponding: true
+  - title: "A spatiotemporal adaptive local search method for tracking congestion propagation in dynamic networks"
+    authors: "Huan, W., Tan, K., Liu, X., Jia, S., Lu, S., Zhang, J., & Huang, W."
+    year: 2025
+    venue: "GIScience & Remote Sensing, 62(1), 2602215"
+    url: "https://www.tandfonline.com/doi/full/10.1080/15481603.2025.2602215"
+    corresponding: true
+  - title: "Wheelchair accessibility to public facilities via transits and analysis of delay factors-A case study of Shanghai, China"
+    authors: "Yang, L., Huang, W., Liu, X., & Yan, W."
+    year: 2025
+    venue: "Computers, Environment and Urban Systems, 121, 102331"
+    url: "https://doi.org/10.1016/j.compenvurbsys.2025.102331"
+    corresponding: true
+  - title: "A WebGIS-based digital twin platform for intelligent operation and maintenance of rail transit infrastructure"
+    authors: "Xu, Y., Huang, W., Xiao, J., Shan, J., Liu, M., Guo, W., Zhu, Y., Zhang, J., & Yan, Y."
+    year: 2026
+    venue: "Expert Systems with Applications, 296, 129180"
+    url: "https://www.sciencedirect.com/science/article/pii/S0957417425027964"
+    corresponding: true
+  - title: "Correlation and causality between traffic congestion and the built environment: a case study in New York city"
+    authors: "Huan, W., Li, S., Liu, X., Wu, H., Diao, M., Li, H., Huang, W."
+    year: 2025
+    venue: "International Journal of Digital Earth, 18(2)"
+    url: "https://doi.org/10.1080/17538947.2025.2548377"
+    corresponding: true
+  - title: "Images and deep learning in human and urban infrastructure interactions pertinent to sustainable urban studies: Review and perspective"
+    authors: "Su, P., Yan, Y., Li, H., Wu, H., Liu, C., & Huang, W."
+    year: 2025
+    venue: "Journal of Applied Earth Observation and Geoinformation, 136, 104352"
+    url: "https://doi.org/10.1016/j.jag.2024.104352"
+    corresponding: true
+  - title: "Spatiotemporal dynamics of violence in social unrest events based on geo-social media data"
+    authors: "Chen, H., Liu, X., Li, S., Grinberger, A. Y., Wu, H., Liu, C., & Huang, W."
+    year: 2025
+    venue: "Environment and Planning B: Urban Analytics and City Science, 23998083251344354"
+    url: "https://doi.org/10.1177/23998083251344354"
+    corresponding: true
+  - title: "An approach for high definition (HD) maps information interaction for autonomous driving (in Chinese)"
+    authors: "Zhang, Y., Huang, W., Liu, X., & Zhang, F."
+    year: 2024
+    venue: "Geomatics and Information Science of Wuhan University"
+    url: "http://ch.whu.edu.cn/en/article/doi/10.13203/j.whugis20230166"
+    corresponding: true
+  - title: "Understanding spatiotemporal motivations of urban micro-mobility from the lens of dockless e-scooter sharing"
+    authors: "Li, H., Yuang, Z., Novack, T., Huang, W., & Zip, A."
+    year: 2022
+    venue: "Computers, Environment and Urban Systems, 96, 101848"
+    url: "https://www.sciencedirect.com/science/article/pii/S0198971522000928"
+    corresponding: true
+  - title: "Revealing Dynamic Spatial Structures of Urban Mobility Networks and the Underlying Evolutionary Patterns"
+    authors: "Liu, C., Chen, L., Yuan, Q., Wu, H., & Huang, W."
+    year: 2022
+    venue: "ISPRS International Journal of Geo-Information, 11(4), 237"
+    url: "https://www.mdpi.com/2220-9964/11/4/237"
+    corresponding: true
+  - title: "A flexible framework for measuring accessibility with destination bundling"
+    authors: "Klumpenhouwer, W., & Huang, W."
+    year: 2021
+    venue: "Journal of Transport Geography, 91, 102949"
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S0966692321000028"
+    corresponding: true

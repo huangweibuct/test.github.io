@@ -1,0 +1,27 @@
+{% comment %}
+  Renders the PUBLICATIONS list from _data/scholar_pubs.yml
+  (auto-refreshed daily by scripts/sync_scholar.py).
+
+  Display rule: only papers where `corresponding: true` AND published within
+  the last 10 years (relative to build time). The corresponding-author flag is
+  maintained via the `corresponding_titles` whitelist in the data file, because
+  Google Scholar does not mark corresponding authorship.
+{% endcomment %}
+{% if site.data.scholar_pubs %}
+{% assign current_year = site.time | date: "%Y" | plus: 0 %}
+{% assign min_year = current_year | minus: 10 %}
+{% assign pubs = site.data.scholar_pubs.publications | where: "corresponding", true %}
+<ul class="scholar-pubs">
+  {% for p in pubs %}
+    {% if p.year >= min_year %}
+    <li class="scholar-pub">
+      <span class="scholar-pub__meta">
+        {% if p.corresponding %}{{ p.authors | replace: "Huang", "<strong>Huang*</strong>" }}{% else %}{{ p.authors | replace: "Huang", "<strong>Huang</strong>" }}{% endif %} ({{ p.year }}).
+      </span>
+      {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>.{% else %}{{ p.title }}.{% endif %}
+      <em class="scholar-pub__venue">{{ p.venue }}</em>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Projects grid (open-source projects) & Scholar publications list
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background: $code-background-color;
+  box-shadow: $box-shadow;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.project-card__name {
+  margin: 0;
+  font-size: $type-size-4;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.project-card__tagline {
+  margin: 0.15rem 0 0;
+  font-size: $type-size-6;
+  font-weight: 600;
+  color: $link-color;
+}
+
+.project-card__desc {
+  margin: 0.55rem 0 0;
+  font-size: $type-size-6;
+  color: $text-color;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.project-card__tag {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  font-size: $type-size-7;
+  border-radius: 999px;
+  background: $lighter-gray;
+  border: 1px solid $border-color;
+  color: $gray;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.9rem;
+
+  a {
+    font-size: $type-size-6;
+    font-weight: 600;
+    text-decoration: none;
+
+    i {
+      margin-right: 0.3rem;
+    }
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+}
+
+/* --- Scholar publications list ------------------------------------------- */
+
+.scholar-pubs {
+  font-size: $type-size-6;
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  .scholar-pub__meta {
+    display: block;
+    color: $text-color;
+  }
+
+  .scholar-pub__venue {
+    color: $gray;
+  }
+
+  strong {
+    color: $text-color;
+  }
+}

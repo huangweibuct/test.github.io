@@ -1,0 +1,28 @@
+{% comment %}
+  Renders the PROJECTS section from _data/projects.yml as a responsive card
+  grid. Styling lives in _sass/_projects.scss.
+{% endcomment %}
+{% if site.data.projects %}
+<div class="projects-grid">
+  {% for project in site.data.projects.projects %}
+  <div class="project-card">
+    <div class="project-card__head">
+      <h3 class="project-card__name">{{ project.name }}</h3>
+      {% if project.tagline %}<p class="project-card__tagline">{{ project.tagline }}</p>{% endif %}
+    </div>
+    {% if project.description %}<p class="project-card__desc">{{ project.description }}</p>{% endif %}
+    {% if project.tags %}
+    <div class="project-card__tags">
+      {% for tag in project.tags %}<span class="project-card__tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="project-card__links">
+      {% if project.code %}<a href="{{ project.code }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+      {% if project.paper %}<a href="{{ project.paper }}" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+      {% if project.data %}<a href="{{ project.data }}" target="_blank" rel="noopener"><i class="fas fa-database" aria-hidden="true"></i> Data</a>{% endif %}
+      {% if project.docs %}<a href="{{ project.docs }}" target="_blank" rel="noopener"><i class="fas fa-book" aria-hidden="true"></i> Docs</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,26 @@
+# Open-source projects of the group, rendered by _includes/projects.html.
+# Edit this file to add / remove projects; the section updates automatically.
+#
+# Fields:
+#   name         (required)  project name
+#   tagline      (optional)  one-line summary
+#   description  (optional)  longer description
+#   code         (optional)  GitHub / code repository URL
+#   paper        (optional)  related publication URL
+#   data         (optional)  dataset download URL
+#   docs         (optional)  documentation URL
+#   tags         (optional)  list of short tags shown as chips
+
+projects:
+  - name: "BuildingSense"
+    tagline: "A multimodal building function classification dataset"
+    description: "34,000+ building footprints in New York City paired with rooftop and street-view imagery, building description texts and 71,000+ POIs, annotated over 26 fine-grained function categories. Published in Earth System Science Data (2026)."
+    paper: "https://essd.copernicus.org/articles/18/2609/2026/essd-18-2609-2026.html"
+    data: "https://figshare.com/s/dc6aada5afa0d620a79f"
+    tags: ["Dataset", "GeoAI", "Remote Sensing", "Street View"]
+
+  - name: "SeMob"
+    tagline: "Semantic synthesis for dynamic urban mobility prediction"
+    description: "A semantic-aware framework that couples urban language cues with mobility data to predict dynamic urban human mobility. Published at EMNLP 2025."
+    paper: "https://aclanthology.org/2025.emnlp-main.775/"
+    tags: ["Model", "Urban Mobility", "NLP"]
