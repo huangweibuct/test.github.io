@@ -5,8 +5,8 @@ Fetches https://celiang.tongji.edu.cn/info/1300/2388.htm, parses its sections,
 compares them against the previous snapshot, and when the content changed:
 
 1. updates _data/tongji.yml (rendered on the website),
-2. refreshes _data/tongji/snapshot.json,
-3. writes a per-section diff report to _data/tongji/sync_report.md.
+2. refreshes _data/tongji-meta/snapshot.json,
+3. writes a per-section diff report to _data/tongji-meta/sync_report.md.
 
 Run locally:  python scripts/sync_tongji.py
 Deps:         pip install requests beautifulsoup4 pyyaml
@@ -28,8 +28,8 @@ SOURCE_URL = "https://celiang.tongji.edu.cn/info/1300/2388.htm"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "_data"
-SNAPSHOT_PATH = DATA_DIR / "tongji" / "snapshot.json"
-REPORT_PATH = DATA_DIR / "tongji" / "sync_report.md"
+SNAPSHOT_PATH = DATA_DIR / "tongji-meta" / "snapshot.json"
+REPORT_PATH = DATA_DIR / "tongji-meta" / "sync_report.md"
 TONGJI_YML_PATH = DATA_DIR / "tongji.yml"
 
 # Section headers on the source page (normalized text -> yaml key).
