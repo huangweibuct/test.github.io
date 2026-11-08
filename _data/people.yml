@@ -51,6 +51,9 @@ groups:
       - name: "Glory Jemimah"
         photo: "glory.jpg"
         research: "Urban heat island"
+      - name: "Yaoyun Zhang"
+        photo: "zyy.jpg"
+        research: "Embody navigation"
   
   - title: "Undergraduate"
     members:
