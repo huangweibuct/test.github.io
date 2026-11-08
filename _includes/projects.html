@@ -1,15 +1,26 @@
 {% comment %}
   Renders the PROJECTS section from _data/projects.yml as a responsive card
-  grid. Styling lives in _sass/_projects.scss.
+  grid. Each card leads with a teaser image; hovering the image reveals the
+  project title. Styling lives in _sass/_projects.scss.
+
+  Fields: name, image (filename under /images/), tagline, description,
+  code, paper, data, docs, tags.
 {% endcomment %}
 {% if site.data.projects %}
 <div class="projects-grid">
   {% for project in site.data.projects.projects %}
   <div class="project-card">
+    {% if project.image %}
+    <div class="project-card__media">
+      <img src="{{ '/images/' | append: project.image | relative_url }}" alt="{{ project.name }}" loading="lazy">
+      <span class="project-card__overlay">{{ project.name }}</span>
+    </div>
+    {% else %}
     <div class="project-card__head">
       <h3 class="project-card__name">{{ project.name }}</h3>
-      {% if project.tagline %}<p class="project-card__tagline">{{ project.tagline }}</p>{% endif %}
     </div>
+    {% endif %}
+    {% if project.tagline %}<p class="project-card__tagline">{{ project.tagline }}</p>{% endif %}
     {% if project.description %}<p class="project-card__desc">{{ project.description }}</p>{% endif %}
     {% if project.tags %}
     <div class="project-card__tags">

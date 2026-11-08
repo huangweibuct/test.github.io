@@ -29,6 +29,11 @@ NEWS
 - 2021.8: Dr. Huang received an NSFC Grant. 
 - 2021.7: Dr. Huang started service as Associate Editor for [ISPRS IJGI](https://www.mdpi.com/journal/ijgi), handeling manuscripts on Citizen Science, Crowd Sourcing and Volunteered Geographic Information.
 
+PROJECTS
+======
+
+{% include projects.html %}
+
 PEOPLE
 ======
 
@@ -39,6 +44,9 @@ PEOPLE
 - [Yanjie Zhang](https://metayj.github.io/) (MS 2024), PhD@National University of Singapore
 - Huanyin Chen (MS 2024), PhD@Wuhan University
 - Zhaoyang Chen (MS 2024), Chinalco Shuwei (Chengdu) Technology Co., LTD
+- Yifan Xu (MS 2026), Alibaba Group
+- Haoran Fang (MS 2026) Genscript Biotech
+- Weihua Huan (PhD 2026)
 
 SELECTED HONOURS
 ======
@@ -51,11 +59,6 @@ PUBLICATIONS
 {% include scholar-pubs.html %}
 
 _Please refer to my [GoogleScholar](https://scholar.google.ca/citations?user=_Xdi93IAAAAJ&hl=en) for complete pulbications._
-
-PROJECTS
-======
-
-{% include projects.html %}
 
 TEACHING
 =====

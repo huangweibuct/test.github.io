@@ -23,6 +23,7 @@ Designed to run unattended via .github/workflows/scholar-sync.yml (daily cron).
 
 import difflib
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -70,6 +71,20 @@ def normalize_title(title: str) -> str:
 
 def fetch_profile() -> Optional[str]:
     """Fetch the Scholar profile HTML; None when blocked."""
+    # Offline/debug path: parse a pre-fetched HTML file instead of hitting
+    # Google (useful when requests' TLS fingerprint gets rate-limited with
+    # HTTP 429 but curl still works).
+    local_file = os.environ.get("SCHOLAR_HTML_FILE")
+    if local_file:
+        try:
+            html = Path(local_file).read_text(encoding="utf-8")
+            if any(m in html for m in ("unusual traffic", "CaptchaRedirect", "gs_captcha")):
+                print("WARN: local HTML is a CAPTCHA page - keeping previous data")
+                return None
+            return html
+        except OSError as exc:
+            print(f"WARN: cannot read SCHOLAR_HTML_FILE: {exc}")
+            return None
     try:
         resp = requests.get(SCHOLAR_URL, headers=HEADERS, timeout=30)
     except Exception as exc:  # network errors, broken local proxies, etc.
@@ -102,12 +117,19 @@ def parse_publications(html: str) -> List[dict]:
         authors = grays[0] if grays else ""
         venue = " ".join(grays[1:]) if len(grays) > 1 else ""
 
-        year_cell = row.select_one("td.gsc_a_h")
+        # Year cell markup differs between the JS and no-JS variants of the
+        # profile page: td.gsc_a_h (classic) vs td.gsc_a_y > span.gsc_a_h.
+        year_cell = row.select_one("td.gsc_a_h") or row.select_one("td.gsc_a_y")
         year = None
         if year_cell:
             match = re.search(r"\d{4}", year_cell.get_text(strip=True))
             if match:
                 year = int(match.group())
+        if year is None and venue:
+            # Last resort: trailing ", 2023" in the venue line (span.gs_oph).
+            match = re.search(r",\s*(\d{4})\s*$", venue)
+            if match:
+                year = int(match.group(1))
 
         if not title or year is None:
             continue
@@ -220,6 +242,35 @@ def main() -> int:
         return 0
 
     kept, rejected_new = filter_and_flag(scraped, whitelist)
+
+    # Carry-over: whitelist titles that did not match this scrape (Scholar
+    # sometimes shows title variants, e.g. "trip purposes" vs "motivations")
+    # stay published from the previous data instead of silently disappearing.
+    this_year = datetime.now(timezone.utc).year
+    min_year = this_year - LAST_N_YEARS
+    kept_norms = {normalize_title(p["title"]) for p in kept}
+    carried: List[dict] = []
+    for title in existing.get("corresponding_titles", []):
+        norm = normalize_title(title)
+        if not title or norm in kept_norms:
+            continue
+        for old in existing.get("publications", []):
+            if (
+                normalize_title(old.get("title", "")) == norm
+                and old.get("corresponding")
+                and (old.get("year") or 0) >= min_year
+            ):
+                carried.append(dict(old))
+                break
+    if carried:
+        print(
+            f"Carried over {len(carried)} whitelisted paper(s) not found in"
+            " this scrape (title variants?):"
+        )
+        for p in carried:
+            print(f"  = {p['title']} ({p['year']})")
+    kept = sorted(kept + carried, key=lambda p: (p["year"], p["title"]), reverse=True)
+
     print(f"Parsed {len(scraped)} publications; kept {len(kept)} corresponding papers.")
 
     # Only rewrite the data file when the kept set actually changed, so the

@@ -6,20 +6,8 @@
 {% endcomment %}
 {% if site.data.tongji %}
 {% assign t = site.data.tongji %}
-<!-- tongji-sync v2 -->
+<!-- tongji-sync v3 -->
 <aside class="tongji-sync">
-  <div class="tongji-sync__header">
-    <span class="tongji-sync__dot"></span>
-    Faculty profile &mdash;
-  </div>
-
-  {% if t.sections.interests %}
-  <div class="tongji-sync__row">
-    <span class="tongji-sync__label">Research interests</span>
-    {% for entry in t.sections.interests %}{{ entry.text | replace: '地理人工智能', 'Geospatial AI' | replace: '城市具身智能', 'Urban Embodied Intelligence' | replace: '城市信息学', 'Urban Informatics' | replace: '计算社会科学', 'Computational Social Science' | replace: '，', ' &middot; ' }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
-  </div>
-  {% endif %}
-
   {% comment %} recruitment lines: the intro sentence, the NEW!! openings line, and the numbered directions {% endcomment %}
   {% assign news = "" | split: "" %}
   {% for entry in t.sections.recruitment %}
@@ -35,10 +23,11 @@
     <ul>
       {% for entry in news %}
         {% assign line = entry.text %}
+        {% assign c1 = line | slice: 0, 1 %}
         {% if line contains '如果你对' %}
           <li>Prospective PhD and Master students, as well as undergraduate interns, interested in embodied intelligence, urban spatial intelligence, urban human activity pattern mining, and human&ndash;machine&ndash;environment interaction are all welcome to apply.</li>
         {% else %}
-          <li>{{ line | remove: '【NEW！！】' | replace: '拟招收', 'Openings for ' | replace: '级博士研究生', '-intake PhD students: ' | replace: '名，研究方向：', ' positions. Research directions:' | replace: '城市行人空间多模态智能理解AI模型研究', 'Multimodal AI models for understanding urban pedestrian space' | replace: '城市环境与人类日常出行行为的交互研究', 'Interaction between urban environments and everyday human travel behavior' | strip }}</li>
+          <li{% if c1 == '1' or c1 == '2' %} class="tongji-sync__dir"{% endif %}>{{ line | remove: '【NEW！！】' | replace: '拟招收', 'Openings for ' | replace: '级博士研究生', '-intake PhD students: ' | replace: '名，研究方向：', ' positions. Research directions:' | replace: '城市行人空间多模态智能理解AI模型研究', 'Multimodal AI models for understanding urban pedestrian space' | replace: '城市环境与人类日常出行行为的交互研究', 'Interaction between urban environments and everyday human travel behavior' | strip }}</li>
         {% endif %}
       {% endfor %}
     </ul>

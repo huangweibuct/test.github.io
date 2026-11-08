@@ -12,28 +12,82 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  padding: 1.1rem 1.25rem;
+  padding: 0;
   border: 1px solid $border-color;
   border-radius: 10px;
   background: $code-background-color;
   box-shadow: $box-shadow;
+  overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   }
+
+  > *:not(.project-card__media) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  > .project-card__tags,
+  > .project-card__links {
+    &:last-child {
+      margin-bottom: 1.1rem;
+    }
+  }
+}
+
+.project-card__media {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #fff;
+    transition: transform 0.35s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+}
+
+.project-card__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 1.25rem 0.75rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: $type-size-4;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(0.4rem);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+
+  .project-card__media:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card__name {
   margin: 0;
+  padding-top: 1.1rem;
   font-size: $type-size-4;
   font-weight: 700;
   color: $text-color;
 }
 
 .project-card__tagline {
-  margin: 0.15rem 0 0;
+  margin: 0.5rem 0 0;
+  padding-top: 0;
   font-size: $type-size-6;
   font-weight: 600;
   color: $link-color;
