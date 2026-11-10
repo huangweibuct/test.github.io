@@ -16,7 +16,7 @@
     {% if p.year >= min_year %}
     <li class="scholar-pub">
       <span class="scholar-pub__meta">
-        {% if p.corresponding %}{{ p.authors | replace: "Huang", "<strong>Huang*</strong>" }}{% else %}{{ p.authors | replace: "Huang", "<strong>Huang</strong>" }}{% endif %} ({{ p.year }}).
+        {% if p.corresponding %}{{ p.authors | replace: "W Huang", "<strong>W Huang*</strong>" | replace: "Huang, W.", "<strong>Huang, W.*</strong>" }}{% else %}{{ p.authors }}{% endif %} ({{ p.year }}).
       </span>
       {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>.{% else %}{{ p.title }}.{% endif %}
       <em class="scholar-pub__venue">{{ p.venue }}</em>

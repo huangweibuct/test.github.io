@@ -69,66 +69,13 @@
   max-width: 180px;
 }
 
-/* --- Tongji synced profile panel ---------------------------------------- */
+/* --- News recruitment item: hide bullet on the "Openings" entry ---------- */
 
-.tongji-sync {
-  margin: 1.5rem 0 2rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid $border-color;
-  border-left: 3px solid $info-color;
-  border-radius: $border-radius;
-  background: $code-background-color;
-  font-size: $type-size-6;
-}
+ul.news-list > li:nth-child(2) {
+  list-style: none;
 
-.tongji-sync__header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: $dark-gray;
-  margin-bottom: 0.6rem;
-}
-
-.tongji-sync__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: $success-color;
-  flex: none;
-}
-
-.tongji-sync__row {
-  margin: 0.35rem 0;
-
-  ul {
-    margin: 0.2rem 0 0;
-    padding-left: 1.1rem;
-  }
-
-  li.tongji-sync__dir {
-    margin-left: 1.25rem;
+  > ul,
+  > ol {
     list-style: none;
   }
-}
-
-.tongji-sync__row--highlight {
-  color: $danger-color;
-
-  .tongji-sync__label {
-    color: $text-color;
-  }
-}
-
-.tongji-sync__label {
-  display: inline-block;
-  font-weight: 600;
-  margin-right: 0.35rem;
-  color: $text-color;
-}
-
-.tongji-sync__meta {
-  margin-top: 0.6rem;
-  font-size: $type-size-7;
-  color: $gray;
 }

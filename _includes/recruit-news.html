@@ -1,0 +1,17 @@
+{% comment %}
+  First item of the News list: recruitment info auto-synced from the
+  Tongji faculty page (scripts/sync_tongji.py). Rendered as markdown so it
+  participates in the surrounding News list. Chinese source phrases are
+  translated via the mappings below.
+{% endcomment %}
+{% if site.data.tongji %}
+{% assign t = site.data.tongji %}
+**Recruitment** &mdash; {% for entry in t.sections.recruitment %}{% if entry.text contains '如果你对' %}Prospective PhD and Master students, as well as undergraduate interns, interested in embodied intelligence, urban spatial intelligence, urban human activity pattern mining, and human&ndash;machine&ndash;environment interaction are all welcome to apply.{% endif %}{% endfor %}
+{% for entry in t.sections.recruitment %}
+{% assign line = entry.text %}
+{% assign first = line | slice: 0, 1 %}
+{% if line contains '拟招收' %}- {{ line | remove: '【NEW！！】' | replace: '拟招收', 'Openings for ' | replace: '级博士研究生', '-intake PhD students: ' | replace: '名，研究方向：', ' positions. Research directions:' | strip }}
+{% elsif first == '1' or first == '2' %}  {{ line | strip }}
+{% endif %}
+{% endfor %}
+{% endif %}
