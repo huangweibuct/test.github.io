@@ -1,26 +1,11 @@
-# Scholar sync report - 2026-11-07 14:20 UTC
+# Scholar sync report - 2026-11-10 08:42 UTC
 
-- Kept (corresponding, last 10 years): 9
-- New recent papers awaiting corresponding-author review: 45
-
-## Newly matched corresponding papers
-
-+ Spatiotemporal dynamics of violence in social unrest events based on geo-social media data
-+ BuildingSense: a new multimodal building function classification dataset
-+ A WebGIS-based digital twin platform for intelligent operation and maintenance of rail transit infrastructure
-+ Wheelchair accessibility to public facilities via transits and analysis of delay factors—A case study of Shanghai, China
-+ SeMob: Semantic Synthesis for Dynamic Urban Mobility Prediction
-+ Images and deep learning in human and urban infrastructure interactions pertinent to sustainable urban studies: Review and perspective
-+ A spatiotemporal adaptive local search method for tracking congestion propagation in dynamic networks
-+ Revealing dynamic spatial structures of urban mobility networks and the underlying evolutionary patterns
-+ A flexible framework for measuring accessibility with destination bundling
+- Kept (corresponding, last 10 years): 15
+- New recent papers awaiting corresponding-author review: 42
 
 ## Recent papers NOT marked corresponding (add the title to `corresponding_titles` in _data/scholar_pubs.yml to publish them)
 
-? Decoding the city's rhythm: a framework for probabilistic separation of work days and rest days human mobility patterns (2026) - P Su, W Huan, L Yan, W Huang
-? Exploring the complexity of urban walking environments based on pedestrian navigation data (2026) - H Fang, W Huang, H Wu
 ? Built Environment and Spatiotemporal Traffic Congestion Patterns: A Systematic Review (2026) - W Huan, X Liu, S Li, H Wu, C Liu, W Huang
-? Towards generative location awareness for disaster response: A probabilistic cross-view geolocalization approach (2026) - H Li, F Deuser, W Yin, S Knoblauch, W Zhao, F Biljecki, Y Xue, W Huang
 ? Incremental Crowd-Source Data Fusion and Map Update Method Based on Driving Data for Traffic Signs (2025) - H Hu, H Wu, S Huang, W Huang, C Liu
 ? Reconnecting the 30-year timeline (1992–2023): constructing a consistent global 500 m ntl dataset using super-resolution reconstruction and ground-object feature constraints (2025) - T Yu, C Liu, A Akbar, Y Liu, W Li, H Wu, W Huang
 ? Cross-view geolocalization and disaster mapping with street-view and VHR satellite imagery: A case study of Hurricane IAN (2025) - H Li, F Deuser, W Yin, X Luo, P Walther, G Mai, W Huang, M Werner

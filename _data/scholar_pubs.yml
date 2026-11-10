@@ -1,4 +1,4 @@
-fetched_at: 2026-11-07 14:20 UTC
+fetched_at: 2026-11-10 08:42 UTC
 source_url: https://scholar.google.com/citations?hl=en&user=_Xdi93IAAAAJ&view_op=list_works&sortby=pubdate&pagesize=100
 corresponding_titles:
 - 'BuildingSense: a new multimodal building function classification dataset'
@@ -13,21 +13,15 @@ corresponding_titles:
 - Understanding spatiotemporal motivations of urban micro-mobility from the lens of dockless e-scooter sharing
 - Revealing Dynamic Spatial Structures of Urban Mobility Networks and the Underlying Evolutionary Patterns
 - A flexible framework for measuring accessibility with destination bundling
-- "Decoding the city's rhythm: a framework for probabilistic separation of work days and rest days human mobility patterns"
+- 'Decoding the city''s rhythm: a framework for probabilistic separation of work days and rest days human mobility patterns'
 - Exploring the complexity of urban walking environments based on pedestrian navigation data
 - 'Towards generative location awareness for disaster response: A probabilistic cross-view geolocalization approach'
 publications:
-- title: "Decoding the city's rhythm: a framework for probabilistic separation of work days and rest days human mobility patterns"
-  authors: P Su, W Huan, L Yan, W Huang
+- title: 'Towards generative location awareness for disaster response: A probabilistic cross-view geolocalization approach'
+  authors: H Li, F Deuser, W Yin, S Knoblauch, W Zhao, F Biljecki, Y Xue, W Huang
   year: 2026
-  venue: 'GIScience & Remote Sensing 63 (1), 2665918'
-  url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:q3oQSFYPqjQC
-  corresponding: true
-- title: Exploring the complexity of urban walking environments based on pedestrian navigation data
-  authors: H Fang, W Huang, H Wu
-  year: 2026
-  venue: 'Computational Urban Science 6 (1), 27'
-  url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:q3oQSFYPqjQC
+  venue: ISPRS Journal of Photogrammetry and Remote Sensing 237, 130-145 , 2026
+  url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:VL0QpB8kHFEC
   corresponding: true
 - title: Spatiotemporal dynamics of violence in social unrest events based on geo-social media data
   authors: H Chen, X Liu, S Li, AY Grinberger, H Wu, C Liu, W Huang
@@ -35,10 +29,17 @@ publications:
   venue: 'Environment and Planning B: Urban Analytics and City Science 53 (2), 303-318 , 2026'
   url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:q3oQSFYPqjQC
   corresponding: true
-- title: 'Towards generative location awareness for disaster response: A probabilistic cross-view geolocalization approach'
-  authors: H Li, F Deuser, W Yin, S Knoblauch, W Zhao, F Biljecki, Y Xue, W Huang
+- title: Exploring the complexity of urban walking environments based on pedestrian navigation data
+  authors: H Fang, W Huang, H Wu
   year: 2026
-  venue: 'ISPRS Journal of Photogrammetry and Remote Sensing 237, 130-145'
+  venue: Computational Urban Science 6 (1), 27 , 2026
+  url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:ye4kPcJQO24C
+  corresponding: true
+- title: 'Decoding the city''s rhythm: a framework for probabilistic separation of work days and rest days human mobility patterns'
+  authors: P Su, W Huan, L Yan, W Huang
+  year: 2026
+  venue: GIScience & Remote Sensing 63 (1), 2665918 , 2026
+  url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Xdi93IAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=_Xdi93IAAAAJ:N5tVd3kTz84C
   corresponding: true
 - title: 'BuildingSense: a new multimodal building function classification dataset'
   authors: P Su, R Chen, H Xu, W Huang, X Deng, S Li, W Yan, H Wu, C Liu
