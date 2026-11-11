@@ -1,4 +1,4 @@
-# Scholar sync report - 2026-11-10 08:42 UTC
+# Scholar sync report - 2026-11-11 08:05 UTC
 
 - Kept (corresponding, last 10 years): 15
 - New recent papers awaiting corresponding-author review: 42
